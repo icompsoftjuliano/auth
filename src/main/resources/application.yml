@@ -1,0 +1,18 @@
+server:
+  port: 8088
+
+spring:
+  datasource:    
+    data: classpath:/sql/data.sql
+    driver-class-name: org.postgresql.Driver
+    platform: postgres
+    schema: classpath:/sql/schema.sql
+    url: jdbc:postgresql://localhost:5432/autenticacao
+    username: postgres
+    password: 1234    
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    generate-ddl: false
+    hibernate:
+      ddl-auto: none
+    show-sql: true        
